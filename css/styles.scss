@@ -1,0 +1,220 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  background: url("../assets/images/bg-intro-desktop.png") var(--red);
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 40px 150px;
+  color: white;
+
+  &-suscription,
+  &-principal-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+}
+
+.principal-text {
+  width: 90%;
+  &-title {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.suscription {
+  width: 80%;
+
+  &-plan {
+    background-color: var(--blue);
+    padding: 2px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    // box-shadow: ;
+    box-shadow: 7px 7px 3px hsla(249, 10%, 26%, 0.158);
+
+    &-text {
+      text-align: center;
+      font-size: 1.4rem;
+    }
+  }
+
+  &-create-account {
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 7px 7px 3px hsla(249, 10%, 26%, 0.158);
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      width: 85%;
+
+      &-group {
+        position: relative;
+
+        input {
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.168);
+          padding: 12px 40px 12px 20px;
+          border-radius: 5px;
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: var(--dark-blue);
+          width: 100%;
+          margin-bottom: 0;
+          transition: 0.2s;
+
+          &:focus {
+            border: 2px solid var(--dark-blue);
+          }
+
+          &:hover {
+            border: 2px solid hsla(248, 32%, 49%, 0.712);
+          }
+        }
+
+        input.error {
+          border-color: var(--red);
+        }
+
+        input.error ~ img,
+        input.error ~ small {
+          visibility: visible;
+        }
+
+        input.success ~ img,
+        input.success ~ small {
+          visibility: hidden;
+        }
+
+        img {
+          position: absolute;
+          right: 0;
+          top: 0px;
+          padding: 9px 8px;
+          visibility: hidden;
+        }
+
+        small {
+          color: var(--red);
+          display: block;
+          margin-bottom: 10px;
+          text-align: end;
+          font-size: 1rem;
+          font-style: italic;
+          padding-right: 4px;
+          visibility: hidden;
+        }
+      }
+
+      &-buttom-submit {
+        background-color: var(--green);
+        border: 1px solid rgba(0, 0, 0, 0.041);
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 15px 0;
+        outline: none;
+        font-weight: 600;
+        transition: 0.4s;
+
+        &:hover {
+          background-color: hsla(154, 59%, 51%, 0.671);
+        }
+      }
+    }
+
+    &-terms {
+      width: 85%;
+      color: var(--grayish-blue);
+      text-align: center;
+      margin-bottom: 25px;
+
+      a {
+        color: var(--red);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.4s;
+
+        &:hover {
+          color: hsla(0, 100%, 74%, 0.678);
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1225px) {
+  .principal-text {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .principal-text {
+    width: 100%;
+    text-align: center;
+
+    &-title {
+      font-size: 4rem;
+    }
+  }
+
+  .suscription {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 730px) {
+  .container {
+    padding: 20px 0 20px 0;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .principal-text {
+    &-title {
+      font-size: 3.6rem;
+    }
+  }
+}

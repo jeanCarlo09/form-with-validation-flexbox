@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="container-principal-text">
+            <div class="principal-text">
+
+                <h1 class="principal-text-title">
+                    Learn to code by <br>
+                    watching others
+                </h1>
+
+                <p>
+                    See how experienced developers solve problem in real-time. <br>
+                    Watching scrited tutorials is great, but understanding how <br>
+                    developers think in invaluable.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="container-suscription">
+            <div class="suscription">
+
+                <div class="suscription-plan">
+                    <h4 class="suscription-plan-text">
+                        Try it free 7 days <span> then $20/mo. thereafter</span>
+                    </h4>
+                </div>
+
+                <div class="suscription-create-account">
+
+                    <form id="createAccountForm" class="suscription-create-account-form" novalidate>
+
+                        <div class="suscription-create-account-form-group">
+                            <input type="text" placeholder="First Name" id="firstName" autocomplete="off" />
+                            <img src="./assets/images/icon-error.svg" alt="image error">
+                            <small>Message error</small>
+                        </div>
+
+                        <div class="suscription-create-account-form-group">
+                            <input type="text" placeholder="Last Name" id="lastName" autocomplete="off" />
+                            <img src="./assets/images/icon-error.svg" alt="image error">
+                            <small>Message error</small>
+                        </div>
+
+                        <div class="suscription-create-account-form-group">
+                            <input type="email" placeholder="Email Address" id="email" autocomplete="off" />
+                            <img src="./assets/images/icon-error.svg" alt="image error">
+                            <small>Message error</small>
+                        </div>
+
+                        <div class="suscription-create-account-form-group">
+                            <input type="password" placeholder="Password" id="password" />
+                            <img src="./assets/images/icon-error.svg" alt="image error">
+                            <small>Message error</small>
+                        </div>
+
+                        <button type="submit" class="suscription-create-account-form-buttom-submit">
+                            CLAIM YOUR FREE TRIAL
+                        </button>
+
+                    </form>
+
+
+
+                    <p class="suscription-create-account-terms">
+                        By clicking the button, you are agreeing to
+                        our <a href="#">Terms and Services</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="./js/validForm.js"></script>
+
+</body>
+
+</html>
